@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Каталог</title>
+</head>
+
+
+  <body>
+    <header id="header" class="header lock-padding __catalog-page">
+  <div class="header__container">
+    <div class="header__body">
+      <div class="header__menu menu">
+        <div class="menu__icon icon-menu">
+          <span class="menu__line"></span>
+        </div>
+        <div class="menu__body">
+          <fieldset data-da=".user--menu__icons,1024,0" class="menu__search ">
+            <button class="menu__search--button search__button" type="submit">
+              <svg id='icon-search-menu' class='search-icon icon-svg'>
+                <use xlink:href='../images/icons.svg#search'></use>
+              </svg>
+            </button>
+            <input placeholder=" " class="menu__search--input search__input" type="search" id="search-menu">
+            <label class="menu__search--label search__label" for="search-menu"> Введіть ваш запит
+            </label>
+          </fieldset>
+          <div data-da=".header__lang,1024,4" class="menu__value">
+            <div class="menu__value--current current-dropdown value">UAH
+              <svg class="value--arrow arrow arrow-icon icon-svg" alt="arrow">
+                <use xlink:href='../images/icons.svg#arrow'></use>
+              </svg>
+            </div>
+            <div class=" menu__value--dropdown visually-hidden dropdown">
+              <a class=" value dropdown-item" href="">USD</a>
+              <a class="value dropdown-item" href="">EUR</a>
+            </div>
+          </div>
+          <nav class="menu__list">
+            <ul class="menu__list">
+              <li class="menu__link--mobile">
+                <a href="">
+                  <svg class='user-profile--icon icon-svg'>
+                    <use xlink:href='../images/icons.svg#personalBrown'></use>
+                  </svg>
+                </a>
+                <a href="" class="menu__link user-profile user-profile--link">Особисий кабінет</a>
+              </li>
+              <li><a class="menu__link" href="">NEW</a></li>
+              <li><a class="menu__link" href="catalog.html">Каталог</a></li>
+              <li><a class="menu__link" href="">Про нас</a></li>
+              <li><a class="menu__link menu__link--mobile" href="">Умови поверенення</a></li>
+              <li><a class="menu__link menu__link--mobile" href="">Контакти</a></li>
+            </ul>
+          </nav>
+          <div class="header__contacts contacts">
+            <div class="contacts__icons">
+              <a href="">
+                <svg class="instagram-icon icon-svg" alt="instagram">
+                  <use xlink:href='../images/icons.svg#instagram'></use>
+                </svg>
+              </a>
+              <a href="">
+                <svg class="telegram-icon icon-svg" alt="telegram">
+                  <use xlink:href='../images/icons.svg#telegram'></use>
+                </svg>
+              </a>
+            </div>
+            <div class="contacts__tel">+38(073) 096 36 44</div>
+            <div class="contacts__email">info@yanki.com</div>
+          </div>
+        </div>
+
+        <div class="header__lang">
+          <div class="header__lang--current current-dropdown language ">UA
+            <svg class="lang--arrow arrow arrow-icon icon-svg" alt="arrow">
+              <use xlink:href='../images/icons.svg#arrow'></use>
+            </svg>
+          </div>
+          <div class="header__lang--dropdown visually-hidden dropdown">
+            <a class="language dropdown-item" href="">EN</a>
+            <a class="language dropdown-item" href="">JP</a>
+          </div>
+        </div>
+        <div class="header__logo">
+          <a class="header__icon-logo" href="index.html">
+            <picture>
+              <source media='(min-width: 1024px)' srcset='../images/YANKI--desktop__catalog-page.svg'>
+              <img src="../images/YANKI__catalog-page.svg" class="logo-icon" alt="logo" />
+            </picture>
+          </a>
+        </div>
+        <div class="header__user--menu">
+          <div class="user--menu__icons icons">
+            <a href="" class="icons__profile">
+              <svg class="profile-icon icon-svg" alt="profile">
+                <use xlink:href='../images/icons.svg#profile'></use>
+              </svg>
+            </a>
+            <a href="" class="icons__favorits">
+              <svg class="favorits-icon icon-svg" alt="favorits">
+                <use xlink:href='../images/icons.svg#favorits'></use>
+              </svg>
+            </a>
+            <a href="cart.html" class="icons__basket">
+              <svg class="basket-icon icon-svg" alt="basket">
+                <use xlink:href='../images/icons.svg#basket'></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+
+    <main>
+      <div class="cart">
+        <div class="cart__body cart__container">
+          <div class="cart__navigation navigation">
+            <a class="navigation__link" href="">Головна</a>
+            <a class="navigation__link" href="">Кошик</a>
+          </div>
+          <h3 class="cart__title title">Ваше замволення</h3>
+          <div class="cart__wrapper">
+            <div class="cart__item product-cart">
+              <div class="product-cart__image item__image">
+                <img src="images/3.product-page/item_1.jpg" srcset="" alt="" />
+              </div>
+              <div class="product-cart__info">
+                <div class="product-cart__top">
+                  <div class="product-cart__id">арт. 1588262</div>
+                  <div class="product-cart__name">Синя парка</div>
+                </div>
+                <div class="product-cart__bottom">
+                  <span
+                    class="product-cart__color radio-color item__color item__color--blue"
+                  ></span>
+                  <div class="product-cart__size">
+                    <div class="product-cart__select selectWrapper">
+                      <select
+                        class="product-cart__selectNative selectNative js-selectNative"
+                        aria-labelledby="jobLabel"
+                      >
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="product-cart__count count">
+                    <button
+                      data-action="minus"
+                      style="padding-bottom: 5px"
+                      class="count__action"
+                    >
+                      -
+                    </button>
+                    <div data-counter class="count__current">1</div>
+                    <button data-action="plus" class="count__action">+</button>
+                  </div>
+                  <div class="product-cart__price">9450 грн</div>
+                  <button
+                    data-action="remove"
+                    class="product-cart__remove"
+                    type="button"
+                  >
+                    <svg class="product-cart__remove--icon">
+                      <use xlink:href="../images/icons.svg#clear"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="cart__item product-cart">
+              <div class="product-cart__image item__image">
+                <img src="images/3.product-page/item_1.jpg" srcset="" alt="" />
+              </div>
+              <div class="product-cart__info">
+                <div class="product-cart__top">
+                  <div class="product-cart__id">арт. 1588262</div>
+                  <div class="product-cart__name">Кремове пальто</div>
+                </div>
+                <div class="product-cart__bottom">
+                  <span
+                    class="product-cart__color radio-color item__color item__color--yellow"
+                  ></span>
+                  <div class="product-cart__size">
+                    <div class="product-cart__select selectWrapper">
+                      <select
+                        class="product-cart__selectNative selectNative js-selectNative"
+                        aria-labelledby="jobLabel"
+                      >
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="product-cart__count count">
+                    <button
+                      data-action="minus"
+                      style="padding-bottom: 5px"
+                      class="count__action"
+                    >
+                      -
+                    </button>
+                    <div data-counter class="count__current">1</div>
+                    <button data-action="plus" class="count__action">+</button>
+                  </div>
+                  <div class="product-cart__price">9450 грн</div>
+                  <button
+                    data-action="remove"
+                    class="product-cart__remove"
+                    type="button"
+                  >
+                    <svg class="product-cart__remove--icon">
+                      <use xlink:href="../images/icons.svg#clear"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="cart__sumprice">До сплати: <span>18900 грн</span></div>
+          </div>
+          <div class="cart__order order-info">
+            <h3 class="cart__title title">Оформлення замовлення</h3>
+            <form action="" class="order-info__form">
+              <div class="order-info__order-column">
+                <fieldset class="order-info__user-info user-info fieldsrt-form">
+                  <div class="order-info__name-block">Персональні дані:</div>
+                  <input
+                    placeholder=" "
+                    id="user-info--name"
+                    type="text"
+                    class="user-info__input input-form"
+                  />
+                  <label class="label-form" for="user-info--name"
+                    >Ваше ім'я*</label
+                  >
+                </fieldset>
+                <fieldset class="order-info__user-info user-info fieldsrt-form">
+                  <input
+                    placeholder=" "
+                    id="user-info--email"
+                    type="email"
+                    class="user-info__input input-form"
+                  />
+                  <label class="label-form" for="user-info--email"
+                    >Ваш e-mail*</label
+                  >
+                </fieldset>
+                <fieldset class="order-info__user-info user-info fieldsrt-form">
+                  <input
+                    placeholder=" "
+                    id="user-info--lastname"
+                    type="text"
+                    class="user-info__input input-form"
+                  />
+                  <label class="label-form" for="user-info--lastname"
+                    >Ваша фамілія*</label
+                  >
+                </fieldset>
+                <fieldset class="order-info__user-info user-info fieldsrt-form">
+                  <input
+                    placeholder=" "
+                    id="user-info--tel"
+                    type="tel"
+                    class="user-info__input input-form"
+                  />
+                  <label class="label-form" for="user-info--tel"
+                    >Ваш телефон*</label
+                  >
+                </fieldset>
+  
+                <fieldset
+                class="order-info__delivery delivery-cart fieldsrt-form"
+                >
+                <div class="order-info__name-block">Спосіб доставки:</div>
+                  <p>По Україні:</p>
+  
+                  <div class="fieldset-wrapper">
+                    <input
+                      id="delivery__UKR"
+                      name="delivery"
+                      class="delivery__input"
+                      type="radio"
+                    />
+                    <label
+                      class="deliver__label label-radiomark"
+                      for="delivery__UKR"
+                      >Самовивіз - вул. Велика Васильківська 14(м. Льва Толстого)
+                    </label>
+                    <span class="delivery__radiomark radiomark"></span>
+                  </div>
+  
+                  <div class="fieldset-wrapper">
+                    <input
+                      id="delivery-new"
+                      name="delivery"
+                      class="delivery__input"
+                      type="radio"
+                    />
+                    <label
+                      class="delivery__label label-radiomark"
+                      for="delivery-new"
+                      >Нова Пошта
+                    </label>
+                    <span class="delivery__radiomark radiomark"></span>
+                  </div>
+                </fieldset>
+  
+                <fieldset
+                  class="order-info__delivery delivery-cart fieldsrt-form"
+                >
+                  <p>Міжнародна доставка:</p>
+                  <div class="fieldset-wrapper">
+                    <input
+                      id="delivery"
+                      name="delivery"
+                      class="delivery__input"
+                      type="radio"
+                    />
+                    <label class="deliver__label label-radiomark" for="delivery"
+                      >Украпошта / 1-3 неділі / 30$ <br>
+                      <br>
+                    </label>
+                    <span class="delivery__radiomark radiomark"></span>
+                  </div>
+                  <div class="fieldset-wrapper">
+                    <input
+                      id="delivery2"
+                      name="delivery"
+                      class="delivery__input"
+                      type="radio"
+                    />
+                    <label
+                      class="deliver__label label-radiomark"
+                      for="delivery2"
+                      >DHL / 3-7 днів / 60$
+                    </label>
+                    <span class="delivery__radiomark radiomark"></span>
+                  </div>
+                </fieldset>
+                <fieldset class="order-info__adress adress fieldsrt-form">
+                  <div class="order-info__name-block">Адреса доставки:</div>
+                  <input
+                    placeholder=" "
+                    id="adress--city"
+                    type="text"
+                    class="adress__input input-form"
+                  />
+                  <label class="label-form" for="adress--city"> Місто*</label>
+                </fieldset>
+                <fieldset class="order-info__adress adress fieldsrt-form">
+                  <input
+                    placeholder=" "
+                    id="adress--post"
+                    type="text"
+                    class="adress__input input-form"
+                  />
+                  <label class="label-form" for="adress--post">
+                    Відділення пошти*</label
+                  >
+                </fieldset>
+  
+                <div
+                  class="order-info__name-block order-info__name-block--mobile"
+                >
+                  Спосіб оплати:
+                </div>
+                <div
+                  class="order-info__name-block order-info__name-block--desktop"
+                >
+                Ви можете сплатити за покупку одним з нижче перерахованих
+                способів:
+                </div>
+                <fieldset class="order-info__pay pay fieldsrt-form">
+                  <div class="fieldset-wrapper">
+                    <input
+                      id="pay__24"
+                      name="pay"
+                      class="pay__input"
+                      type="radio"
+                    />
+                    <label class="pay__label label-radiomark" for="pay__24"
+                      >Повна передплата через Приват 24
+                      <img src="images/24.png" alt="" />
+                    </label>
+                    <span class="pay__radiomark radiomark"></span>
+                  </div>
+                </fieldset>
+  
+                <fieldset class="order-info__pay pay fieldsrt-form">
+  
+                  <div class="fieldset-wrapper order-info__visa ">
+                    <input
+                      id="payVisa"
+                      name="pay"
+                      class="pay__input"
+                      type="radio"
+                    />
+                    <label class="pay__label label-radiomark" for="payVisa"
+                      >Грошовим переказом Visa/MasterCard
+                      <img src="images/Visa.png" alt="" />
+                      <img src="images/MasterCard.png" alt="" />
+                    </label>
+                    <span class="pay__radiomark radiomark"></span>
+                  </div>
+                </fieldset>
+                <fieldset class="order-info__pay pay fieldsrt-form">
+  
+                  <div class="fieldset-wrapper">
+                    <input
+                      id="pay"
+                      name="pay"
+                      class="pay__input"
+                      type="radio"
+                    />
+                    <label class="pay__label label-radiomark" for="pay"
+                      >Післяплатою у відділенні Нової Пошти
+                    </label>
+                    <span class="pay__radiomark radiomark"></span>
+                  </div>
+                </fieldset>
+                <fieldset class="order-info__bonus bonus fieldsrt-form ">
+                  <input
+                    placeholder=" "
+                    id="bonus--city"
+                    type="text"
+                    class="bonus__input input-form"
+                  />
+                  <label class="label-form" for="bonus--city"
+                    >Сума списання бонусів*</label
+                  >
+                </fieldset>
+              </div>
+              <div class="order-info__pay-column">
+                <ul class="order-info__links">
+                  <li>
+                    <a href="" class="order-info__link order-info__user-profile"
+                      >Увійти до особистого кабінету</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="order-info__link">УМОВИ ДОСТАВКИ</a>
+                  </li>
+                  <li>
+                    <a href="" class="order-info__link"
+                      >УМОВИ ОБМІНУ І ПОВЕРНЕННЯ
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="order-info__link">ІНФОРМАЦІЯ ПРО ОПЛАТУ</a>
+                  </li>
+                </ul>
+                <div class="order-info__checkout">
+                  <div class="order-info__row">
+                    ДОСТАВКА: <span>За тарифами перевізника</span>
+                  </div>
+                  <div class="order-info__row">
+                    БОНУСИ: <span>-69 грн</span>
+                  </div>
+                  <div class="order-info__row">
+                    РАЗОМ <span>15250 грн</span>
+                  </div>
+                </div>
+                <button class="order-info__button btn btn--brown" type="submit">
+                  ОФОРМИТИ ЗАМОВЛЕННЯ
+                </button>
+                <p class="order-info__policy">
+                  Натискаючи на кнопку «сплатити замовлення», я приймаю умови
+                  <a href="">публічної оферти</a> и
+                  <a href="">політики конфіденційності</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-menu">
+  <div class="footer-menu__body footer__container">
+    <div class="footer-menu__navigation">
+      <details class="footer-menu__company" open>
+        <summary class="company__title title"> Компанія
+        </summary>
+        <ul class="company__list">
+          <li><a href="" class="company__link">Про нас</a></li>
+          <li><a href="" class="company__link">Контакти</a></li>
+        </ul>
+      </details>
+      <details class="footer-menu__useful" open>
+        <summary class="useful__title title">Корисне
+        </summary>
+        <ul class="useful__list">
+          <li><a href="" class="useful__link">Оплата і доставка</a>
+          </li>
+          <li><a href="" class="useful__link">Умови повернення</a>
+          </li>
+          <li> <a href="" class="useful__link">Бонусна система</a>
+          </li>
+        </ul>
+      </details>
+      <details class="footer-menu__for-user" open>
+        <summary class="for-user__title title">Покупцю
+        </summary>
+        <ul class="for-user__list">
+          <li><a href="" class="for-user__link">Вибране</a>
+          </li>
+          <li><a href="" class="for-user__link">Публічна оферта</a>
+          </li>
+          <li><a href="" class="for-user__link">Політика конфіденційності</a>
+          </li>
+        </ul>
+      </details>
+      <div class="footer-menu__contacts contacts">
+        <div class="contacts__title title">Контакти</div>
+        <div class="contacts__icons">
+          <a href="">
+            <svg class="instagram-icon icon-svg" alt="instagram">
+              <use xlink:href='../images/icons.svg#instagram'></use>
+            </svg>
+          </a>
+          <a href="">
+            <svg class="telegram-icon icon-svg" alt="telegram">
+              <use xlink:href='../images/icons.svg#telegram'></use>
+            </svg>
+          </a>
+        </div>
+        <a href="tel:+380730963644" class="contacts__tel">+38(073) 096 36 44</a>
+        <a href="email:info@yanki.com" class="contacts__email">info@yanki.com</a>
+      </div>
+    </div>
+    <div class="footer-menu__copyright">
+      ©️ 2023 Yanki. All rights reserved
+    </div>
+  </div>
+</footer>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="js/app.min.js"></script>
+  </body>
+</html>

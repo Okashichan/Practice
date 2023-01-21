@@ -1,0 +1,49 @@
+.__catalog-page {
+  .value--arrow {
+    fill: black;
+  }
+  .icon-svg {
+    fill: $color-main;
+  }
+  .header {
+    &__lang {
+      color: black;
+    }
+  }
+  .lang--arrow {
+    fill: black;
+  }
+  .menu {
+    &__line {
+      background-color: $color-main;
+    }
+    &__body {
+      @media (max-width: 1023px){
+        border-top: 1px solid $color-main;
+      }
+    }
+    &__link {
+      color: black;
+    }
+  }
+  .icon-menu {
+    span,
+    &::before,
+    &::after {
+      background-color: $color-main;
+    }
+  }
+  .search-icon {
+    fill: black;
+  }
+  .value--arrow {
+    fill: black;
+
+  }
+  .dropdown {
+    background-color: white;
+  }
+  .dropdown-item {
+    color: black;
+  }
+}
