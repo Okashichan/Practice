@@ -1,0 +1,35 @@
+$maxWidth: 1600;
+$maxwidthConteiner: 1200;
+
+@mixin adaptive-value($property, $startSize, $minSize, $type) {
+	$addsize: $startSize - $minSize;
+
+	@if $type==1 {
+		#{$property}: $startSize + px;
+		@media (max-width: #{$maxwidthConteiner + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addsize} * ((100vw - 320px) / #{$maxwidthConteiner - 320}));
+		}
+	} @else if $type==2 {
+		#{$property}: $startSize + px;
+		@media (min-width: #{$maxwidthConteiner + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addsize + px} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		#{$property}: calc(#{$minSize + px} + #{$addsize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+@function prc($pxOne, $pxTwo) {
+	$result: calc($pxOne/$pxTwo) * 100%;
+	@return $result;
+}
+
+@function rem($px) {
+	$result: calc($px/$fontsize) + rem;
+	@return $result;
+}
+
+@function em($px) {
+	$result: calc($px/$fontsize) + em;
+	@return $result;
+}

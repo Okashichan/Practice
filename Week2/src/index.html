@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Главная'
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/header.html', {
+      'page': '__home-page'
+    })
+    <main class="page">
+      <section class="main-screen">
+        <div class="main-screen__images">
+          <picture class="main-img main-img__1 ibg">
+            <img src='@img/1.main-screen/Yanki1.jpg' srcset='' alt=''>
+          </picture>
+          <picture class="main-img main-img__2 ibg">
+            <source srcset='@img/1.main-screen/Yanki2.jpg' media="(min-width: 768px)">
+            <img src='@img/1.main-screen/Yanki2.jpg' srcset='' alt=''>
+          </picture>
+          <picture class="main-img main-img__3 ibg">
+            <source srcset='@img/1.main-screen/Yanki3.jpg' media="(min-width: 1024px)">
+            <img src='@img/1.main-screen/Yanki3.jpg' srcset='' alt=''>
+          </picture>
+        </div>
+        <div class="main-screen__content">
+          <a href="" class="main-screen__body">
+            <h1 class="main-screen__title title">Нова колекція</h1>
+            <div class="main-screen__subtitle">Дивитись новинки
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="category">
+        <div class="category__body category__container">
+          <h2 class="category__title title">Категорії</h2>
+          <div class="category__slider swiper">
+            <div class="category__slider-wrapper swiper-wrapper">
+              <div class="category__slide swiper-slide">
+                <a href="product-page.html" class="category__item item">
+                  <div class="item__image ibg">
+                    <img src='@img/2.category/category_1.jpg' srcset='' alt=''>
+                  </div>
+                  <div class="item__category-name">Куртки</div>
+                </a>
+              </div>
+              <div class="category__slide swiper-slide">
+                <a href="" class="category__item item">
+                  <div class="item__image ibg">
+                    <img src='@img/2.category/category_2.jpg' srcset='' alt=''>
+                  </div>
+                  <div class="item__category-name">Пальто</div>
+                </a>
+              </div>
+              <div class="category__slide swiper-slide">
+                <a href="" class="category__item item">
+                  <div class="item__image ibg">
+                    <img src='@img/2.category/category_3.jpg' srcset='' alt=''>
+                  </div>
+                  <div class="item__category-name">Шуби</div>
+                </a>
+              </div>
+              <div class="category__slide swiper-slide">
+                <a href="" class="category__item item">
+                  <div class="item__image ibg">
+                    <img src='@img/2.category/category_4.jpg' srcset='' alt=''>
+                  </div>
+                  <div class="item__category-name">Парки</div>
+                </a>
+              </div>
+              <div class="category__slide swiper-slide">
+                <a href="" class="category__item item">
+                  <div class="item__image ibg">
+                    <img src='@img/2.category/category_1.jpg' srcset='' alt=''>
+                  </div>
+                  <div class="item__category-name">Куртки</div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <section class="email-subscribe">
+        <div class="email-subscribe__body __container">
+          <h2 class="email-subscribe__title title">Дізнайтесь першим про новинки</h2>
+          <form action="" method='' class="email-subscribe__form-email">
+            <fieldset class="email-subscribe__form-group fieldsrt-form">
+              <input autocomplete="off" type="email" name="form[]" data-error="Помилка" placeholder=" "
+                class="email-subscribe__email--input input-form" id="email-form">
+              <label class="email-subscribe__email--label label-form" for="email-form">Ваш e-mail*</label>
+            </fieldset>
+            <button class="email-subscribe__button btn btn--brown" type="submit">Підписатись</button>
+          </form>
+          <p class="email-subscribe__accept-policy">Натискаючи на кнопку «Підписатися», я погоджуюсь на обробку моїх
+            персональних даних та ознайомлений з умовами конфіденційності.
+          </p>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', {
+      })
+
+  </div>
+  @@include('html/script.html', {
+    })
+</body>
+</html>
