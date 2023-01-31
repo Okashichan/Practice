@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"] - PracticeCSharp</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.min.css">
+</head>
+<body>
+    <header id="header" class="header lock-padding @ViewData["Page"]">
+        <div class="header__container">
+            <div class="header__body">
+                <div class="header__menu menu">
+                    <div class="menu__icon icon-menu">
+                        <span class="menu__line"></span>
+                    </div>
+                    <div class="menu__body">
+                        <fieldset data-da=".user--menu__icons,1024,0" class="menu__search ">
+                            <button class="menu__search--button search__button" type="submit">
+                                <svg id='icon-search-menu' class='search-icon icon-svg'>
+                                    <use xlink:href='../images/icons.svg#search'></use>
+                                </svg>
+                            </button>
+                            <input placeholder=" " class="menu__search--input search__input" type="search" id="search-menu">
+                            <label class="menu__search--label search__label" for="search-menu">
+                                Введіть ваш запит
+                            </label>
+                        </fieldset>
+                        <div data-da=".header__lang,1024,4" class="menu__value">
+                            <div class="menu__value--current current-dropdown value">
+                                UAH
+                                <svg class="value--arrow arrow arrow-icon icon-svg" alt="arrow">
+                                    <use xlink:href='../images/icons.svg#arrow'></use>
+                                </svg>
+                            </div>
+                            <div class=" menu__value--dropdown visually-hidden dropdown">
+                                <a class=" value dropdown-item" href="">USD</a>
+                                <a class="value dropdown-item" href="">EUR</a>
+                            </div>
+                        </div>
+                        <nav class="menu__list">
+                            <ul class="menu__list">
+                                <li class="menu__link--mobile">
+                                    <a href="">
+                                        <svg class='user-profile--icon icon-svg'>
+                                            <use xlink:href='../images/icons.svg#personalBrown'></use>
+                                        </svg>
+                                    </a>
+                                    <a href="" class="menu__link user-profile user-profile--link">Особисий кабінет</a>
+                                </li>
+                                <li><a class="menu__link" href="">NEW</a></li>
+                                <li><a class="menu__link" asp-controller="Shop" asp-action="Index">Каталог</a></li>
+                                <li><a class="menu__link" href="">Про нас</a></li>
+                                <li><a class="menu__link menu__link--mobile" href="">Умови поверенення</a></li>
+                                <li><a class="menu__link menu__link--mobile" href="">Контакти</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__contacts contacts">
+                            <div class="contacts__icons">
+                                <a href="">
+                                    <svg class="instagram-icon icon-svg" alt="instagram">
+                                        <use xlink:href='../images/icons.svg#instagram'></use>
+                                    </svg>
+                                </a>
+                                <a href="">
+                                    <svg class="telegram-icon icon-svg" alt="telegram">
+                                        <use xlink:href='../images/icons.svg#telegram'></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="contacts__tel">+38(073) 096 36 44</div>
+                            <div class="contacts__email">info@yanki.com</div>
+                        </div>
+                    </div>
+
+                    <div class="header__lang">
+                        <div class="header__lang--current current-dropdown language ">
+                            UA
+                            <svg class="lang--arrow arrow arrow-icon icon-svg" alt="arrow">
+                                <use xlink:href='../images/icons.svg#arrow'></use>
+                            </svg>
+                        </div>
+                        <div class="header__lang--dropdown visually-hidden dropdown">
+                            <a class="language dropdown-item" href="">EN</a>
+                            <a class="language dropdown-item" href="">JP</a>
+                        </div>
+                    </div>
+                    <div class="header__logo">
+                        <a class="header__icon-logo" asp-controller="Home" asp-action="Index">
+                            <picture>
+                                <source media='(min-width: 1024px)' srcset=@String.Format($"/images/YANKI--desktop{ViewData["Page"]}.svg")>
+                                <img src=@String.Format($"/images/YANKI--desktop{ViewData["Page"]}.svg") class="logo-icon" alt="logo" />
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="header__user--menu">
+                        <div class="user--menu__icons icons">
+                            <a href="" class="icons__profile">
+                                <svg class="profile-icon icon-svg" alt="profile">
+                                    <use xlink:href='../images/icons.svg#profile'></use>
+                                </svg>
+                            </a>
+                            <a href="" class="icons__favorits">
+                                <svg class="favorits-icon icon-svg" alt="favorits">
+                                    <use xlink:href='../images/icons.svg#favorits'></use>
+                                </svg>
+                            </a>
+                            <a asp-controller="Shop" asp-action="Cart" class="icons__basket">
+                                <svg class="basket-icon icon-svg" alt="basket">
+                                    <use xlink:href='../images/icons.svg#basket'></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer-menu">
+        <div class="footer-menu__body footer__container">
+            <div class="footer-menu__navigation">
+                <details class="footer-menu__company" open>
+                    <summary class="company__title title">
+                        Компанія
+                    </summary>
+                    <ul class="company__list">
+                        <li><a href="" class="company__link">Про нас</a></li>
+                        <li><a href="" class="company__link">Контакти</a></li>
+                    </ul>
+                </details>
+                <details class="footer-menu__useful" open>
+                    <summary class="useful__title title">
+                        Корисне
+                    </summary>
+                    <ul class="useful__list">
+                        <li>
+                            <a href="" class="useful__link">Оплата і доставка</a>
+                        </li>
+                        <li>
+                            <a href="" class="useful__link">Умови повернення</a>
+                        </li>
+                        <li>
+                            <a href="" class="useful__link">Бонусна система</a>
+                        </li>
+                    </ul>
+                </details>
+                <details class="footer-menu__for-user" open>
+                    <summary class="for-user__title title">
+                        Покупцю
+                    </summary>
+                    <ul class="for-user__list">
+                        <li>
+                            <a href="" class="for-user__link">Вибране</a>
+                        </li>
+                        <li>
+                            <a href="" class="for-user__link">Публічна оферта</a>
+                        </li>
+                        <li>
+                            <a href="" class="for-user__link">Політика конфіденційності</a>
+                        </li>
+                    </ul>
+                </details>
+                <div class="footer-menu__contacts contacts">
+                    <div class="contacts__title title">Контакти</div>
+                    <div class="contacts__icons">
+                        <a href="">
+                            <svg class="instagram-icon icon-svg" alt="instagram">
+                                <use xlink:href='../images/icons.svg#instagram'></use>
+                            </svg>
+                        </a>
+                        <a href="">
+                            <svg class="telegram-icon icon-svg" alt="telegram">
+                                <use xlink:href='../images/icons.svg#telegram'></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <a href="tel:+380730963644" class="contacts__tel">+38(073) 096 36 44</a>
+                    <a href="email:info@yanki.com" class="contacts__email">info@yanki.com</a>
+                </div>
+            </div>
+            <div class="footer-menu__copyright">
+                ©️ 2023 Yanki. All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="/js/app.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
